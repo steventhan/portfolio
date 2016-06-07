@@ -1,0 +1,35 @@
+img {
+  max-width: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+/*TEXT STYLES
+=======================================*/
+h1 {
+  padding: 0 0.5em 0 0.5em;
+}
+
+p {
+  font-size: 1em;
+  padding: 0 0.5em 0 0.5em;
+}
+
+address {
+  display: inline-block;
+}
+
+
+/*LINK STYLES
+=======================================*/
+a, a:link, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;;
+}
