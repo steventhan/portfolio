@@ -18,13 +18,12 @@ body {
 =======================================*/
 h1 {
   color: #fff;
-  padding: 0 0.5em 0 0.5em;
+  display: inline;
 }
 
 p {
   color: #fff;
   font-size: 1em;
-  padding: 0 0.5em 0 0.5em;
 }
 
 address {
@@ -41,4 +40,18 @@ a, a:link, a:active {
 
 a:visited {
   color: inherit;;
+}
+
+/*BUTTON STYLES
+=======================================*/
+.button {
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #FD5F00;
+  border-style: solid;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
