@@ -14,6 +14,8 @@ body {
   background-color: #111d29;
 }
 
+
+
 /*TEXT STYLES
 =======================================*/
 h1 {
@@ -55,3 +57,28 @@ a:visited {
   text-decoration: none;
   display: inline-block;
 }
+
+
+/*@media only screen and (min-width: 640px) {
+  body {
+    -webkit-animation: zoomIn 20s linear alternate;
+    animation: zoomIn 20s linear alternate;
+  }
+  @-webkit-keyframes zoomIn {
+    0% {
+      background-size: 100% 100%;
+    }
+    100% {
+      background-size: 120% 120%;
+    }
+  }
+
+  @keyframes zoomIn {
+    0% {
+      background-size: 100% 100%;
+    }
+    100% {
+      background-size: 120% 120%;
+    }
+  }
+}*/
