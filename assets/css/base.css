@@ -5,15 +5,24 @@ img {
 body {
   line-height: 1.5;
   font-size: 100%;
+  color: #fff;
+  background-image:url('/assets/img/main-background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #111d29;
 }
 
 /*TEXT STYLES
 =======================================*/
 h1 {
+  color: #fff;
   padding: 0 0.5em 0 0.5em;
 }
 
 p {
+  color: #fff;
   font-size: 1em;
   padding: 0 0.5em 0 0.5em;
 }
