@@ -5,17 +5,27 @@ img {
 body {
   line-height: 1.5;
   font-size: 100%;
+  color: #fff;
+  background-image:url('/assets/img/main-background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #111d29;
 }
+
+
 
 /*TEXT STYLES
 =======================================*/
 h1 {
-  padding: 0 0.5em 0 0.5em;
+  color: #fff;
+  display: inline;
 }
 
 p {
+  color: #fff;
   font-size: 1em;
-  padding: 0 0.5em 0 0.5em;
 }
 
 address {
@@ -33,3 +43,42 @@ a, a:link, a:active {
 a:visited {
   color: inherit;;
 }
+
+/*BUTTON STYLES
+=======================================*/
+.button {
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #FD5F00;
+  border-style: solid;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+/*@media only screen and (min-width: 640px) {
+  body {
+    -webkit-animation: zoomIn 20s linear alternate;
+    animation: zoomIn 20s linear alternate;
+  }
+  @-webkit-keyframes zoomIn {
+    0% {
+      background-size: 100% 100%;
+    }
+    100% {
+      background-size: 120% 120%;
+    }
+  }
+
+  @keyframes zoomIn {
+    0% {
+      background-size: 100% 100%;
+    }
+    100% {
+      background-size: 120% 120%;
+    }
+  }
+}*/
