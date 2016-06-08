@@ -1,12 +1,12 @@
 .container-fluid {
-  width: 100%;
+  max-width: 100%;
 }
 
-
 .container {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin: 1em 1em 0 1em;
 }
 
 .main-container {
