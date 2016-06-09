@@ -22,11 +22,12 @@
         </div>
         <div id="main-menu" class="main-menu collapse">
           <ul>
-            <li><a href="/"><i class="fa fa-info" aria-hidden="true"></i> About me</a></li>
+            <li class="menu-item" data-page="home"><a href="#/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+            <li class="menu-item" data-page="about-me"><a href="#/about-me"><i class="fa fa-info" aria-hidden="true"></i> About me</a></li>
             <li><a id="projects-link" href="#animatedModal"><i class="fa fa-code-fork" aria-hidden="true"></i> Projects</a></li>
             <li><a href="https://www.facebook.com/steventhan93"><i class="fa fa-facebook-f" aria-hidden="true"></i> Facebook</a></li>
             <li><a href="https://github.com/steventhan/"><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
-            <li><a href="mailto:steven@thanst.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> Get in touch</a></li>
+            <li class=menu-item data-page="contact"><a href="#/get-in-touch"><i class="fa fa-envelope-o" aria-hidden="true"></i> Get in touch</a></li>
           </ul>
         </div>
 
@@ -34,8 +35,19 @@
     </header>
 
     <main class="container">
-      <h1>About me</h1>
-      <p>My name is Steven Than. I'm a student in Code 301 at Code Fellows Seattle campus. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <section id="home" class="page-content">
+        <h1>Hi!</h1>
+        <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </section>
+      <section id="about-me" class="page-content">
+        <h1>About me</h1>
+        <p>My name is Steven Than. I'm a student in Code 301 at Code Fellows Seattle campus. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </section>
+      <section id="contact" class="page-content">
+        <h1>Contact form</h1>
+        <p>Contact form goes here</p>
+      </section>
+
     </main>
 
     <div id="animatedModal">
@@ -79,5 +91,8 @@
     <script src="vendor/animatedModal/animatedModal.min.js"></script>
     <script src="assets/js/projects.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/views.js">
+
+    </script>
   </body>
 </html>

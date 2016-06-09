@@ -51,6 +51,10 @@
 .slick-active {
     outline: none;
 }
+
+.page-content {
+  display: none;
+}
 @media only screen and (min-width: 640px) {
   .navbar {
     padding: 0em 1em 0em 1em;
