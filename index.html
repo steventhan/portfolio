@@ -13,6 +13,28 @@
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/modules.css">
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
+    <script id="project-template" type="text/x-handlebars-template">
+      <project class="project-content project-template">
+        <div class="project-img">
+          <img src="{{image}}" alt="" />
+        </div>
+        <div class="project-summary">
+          <h2 class="project-name">{{projectName}}</h2>
+          <ul class=summary-list>
+            <li class="type">{{category}}</li>
+            <li class="url"><a href="{{url}}"><i class="fa fa-link" aria-hidden="true"></i> URL</a> </li>
+            <li class="github"><a href="{{github}}"><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
+            <li class="technology">{{technology}}</li>
+            <li class="development-start">{{developmentStart}}</li>
+            <li class="development-end">{{developmentEnd}}</li>
+          </ul>
+        </div>
+        <div class="project-detail">
+          <h2>Detail</h2>
+          {{{detail}}}
+        </div>
+      </project>
+    </script>
   </head>
   <body>
     <header class="container-fluid">
@@ -66,33 +88,13 @@
       &copy; 2016 Steven Than
     </footer>
 
-    <project class="project-content project-template">
-      <div class="project-img">
-        <img src="assets/img/test.png" alt="" />
-      </div>
-      <div class="project-summary">
-        <h2 class="project-name"></h2>
-        <ul class=summary-list>
-          <li class="type"></li>
-          <li class="url"><a href=""><i class="fa fa-link" aria-hidden="true"></i> URL</a> </li>
-          <li class="github"><a href=""><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
-          <li class="technology"></li>
-          <li class="development-start"></li>
-          <li class="development-end"></li>
-        </ul>
-      </div>
-      <div class="project-detail">
-        <h2>Detail</h2>
-      </div>
-    </project>
     <!-- Main script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.com/libraries/handlebars.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="vendor/animatedModal/animatedModal.min.js"></script>
     <script src="assets/js/projects.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/views.js">
-
-    </script>
+    <script src="assets/js/views.js"></script>
   </body>
 </html>

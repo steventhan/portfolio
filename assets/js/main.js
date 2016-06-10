@@ -17,15 +17,9 @@ $(document).ready(function(){
 
   var projects = [];
   function Project(projectData) {
-    this.projectName = projectData.projectName;
-    this.category = projectData.category;
-    this.technology = projectData.technology;
-    this.image = projectData.image;
-    this.url = projectData.url;
-    this.github = projectData.github;
-    this.developmentStart = projectData.developmentStart;
-    this.developmentEnd = projectData.developmentEnd;
-    this.detail = projectData.detail;
+    for (property in projectData) {
+      this[key] = projectData[key];
+    }
   }
 
   Project.prototype.toHtml = function() {
