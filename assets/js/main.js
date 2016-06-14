@@ -17,30 +17,16 @@ $(document).ready(function(){
 
   var projects = [];
   function Project(projectData) {
-    this.projectName = projectData.projectName;
-    this.category = projectData.category;
-    this.technology = projectData.technology;
-    this.image = projectData.image;
-    this.url = projectData.url;
-    this.github = projectData.github;
-    this.developmentStart = projectData.developmentStart;
-    this.developmentEnd = projectData.developmentEnd;
-    this.detail = projectData.detail;
+    for (property in projectData) {
+      this[property] = projectData[property];
+    }
   }
 
   Project.prototype.toHtml = function() {
-    var $project = $('project.project-template').clone();
-    $project.find('.project-img img').attr('src', this.image);
-    $project.find('.project-name').text('Project: '+ this.projectName);
-    $project.find('.type').text('Type: ' + this.category);
-    $project.find('.url a').attr('href', this.url);
-    $project.find('.github a').attr('href', this.github);
-    $project.find('.technology').text('Technology: ' + this.technology.join(', '));
-    $project.find('.project-detail').append(this.detail);
-    $project.find('.development-start').text('Start: ' + this.developmentStart);
-    $project.find('.development-end').text('End: ' + this.developmentEnd);
-    $project.removeClass('project-template');
-    return $project;
+    var source = $('#project-template').html();
+    var template = Handlebars.compile(source);
+    var html = template(this);
+    return html;
   };
 
   myProjects.forEach(function(projectData) {
