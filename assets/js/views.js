@@ -9,4 +9,10 @@ appView.mainNav = function(){
   $('#main-menu .menu-item:first').click();
 };
 
+appView.renderProjectPage = function () {
+  Project.all.forEach(function(project){
+    $('#projects').append(project.toHtml());
+  });
+};
 appView.mainNav();
+Project.fetchAll();
