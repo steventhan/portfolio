@@ -66,5 +66,16 @@
     }, []);
   };
 
+  Project.projectsByCategory = function() {
+    return Project.allCategories().map(function(category) {
+      return {
+        category: category,
+        numArticles: Project.allProjects.filter(function(project){
+          return project.category = category;
+        }).length
+      };
+    });
+  };
+
   module.Project = Project;
 })(window);
