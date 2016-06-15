@@ -55,5 +55,16 @@
     $('#projects').append(project.toHtml());
   });
 
+  Project.allCategories = function () {
+    return Project.allProjects.map(function(project) {
+      return project.category;
+    }).reduce(function(acc, cur, idx, array) {
+      if (!acc.includes(cur)) {
+        acc.push(cur);
+      }
+      return acc;
+    }, []);
+  };
+
   module.Project = Project;
 })(window);
