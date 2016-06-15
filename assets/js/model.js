@@ -51,7 +51,7 @@
     }
   };
 
-  Project.all.forEach(function(project){
+  Project.allProjects.forEach(function(project){
     $('#projects').append(project.toHtml());
   });
 
