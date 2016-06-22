@@ -24,13 +24,13 @@
   Project.fetchAll = function () {
     if (localStorage.projectData) {
       Project.loadAll(JSON.parse(localStorage.projectData));
-      appView.renderProjectPage();
+      projectView.renderProjectPage();
     } else {
       $.getJSON('assets/js/data/projects.json', function (data, message, xhr) {
         localStorage.eTag = xhr.getResponseHeader('eTag');
         localStorage.projectData = JSON.stringify(data);
         Project.loadAll(JSON.parse(localStorage.projectData));
-        appView.renderProjectPage();
+        projectView.renderProjectPage();
       });
     }
   };
