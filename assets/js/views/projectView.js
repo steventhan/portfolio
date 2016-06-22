@@ -7,4 +7,3 @@ projectView.renderProjectPage = function () {
 };
 
 Project.fetchAll();
-repos.requestRepos();

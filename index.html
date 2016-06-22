@@ -37,6 +37,19 @@
         </div>
       </project>
     </script>
+
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Primary Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last Updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
   </head>
   <body>
     <header class="container-fluid">
@@ -62,6 +75,7 @@
       <section id="home" class="page-content">
         <h1>Hi!</h1>
         <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <div id="github-repos"></div>
       </section>
       <section id="about-me" class="page-content">
         <h1>About me</h1>
@@ -96,17 +110,20 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="vendor/animatedModal/animatedModal.min.js"></script>
     <script src="vendor/pagejs/page.js"></script>
+    <script src="githubToken.js"></script>
     <!-- Model files -->
     <script src="assets/js/models/project.js"></script>
+    <script src="assets/js/models/repo.js"></script>
     <!-- View files -->
     <script src="assets/js/views/projectView.js"></script>
+    <script src="assets/js/views/homeView.js"></script>
     <!-- Controller files -->
     <script src="assets/js/controllers/homeController.js"></script>
     <script src="assets/js/controllers/aboutMeController.js"></script>
     <script src="assets/js/controllers/contactController.js"></script>
     <script src="assets/js/route.js"></script>
 
-    <script src="githubToken.js"></script>
+
     <script src="assets/js/main.js"></script>
 
   </body>
