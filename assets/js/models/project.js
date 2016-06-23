@@ -24,29 +24,13 @@
   Project.fetchAll = function () {
     if (localStorage.projectData) {
       Project.loadAll(JSON.parse(localStorage.projectData));
-      appView.renderProjectPage();
-      // $.ajax({
-      //   url: 'assets/js/data/projects.json',
-      //   type: 'HEAD',
-      // }).done(function(data, message, xhr){
-      //   if (xhr.getResponseHeader('eTag') !== localStorage.eTag) {
-      //     localStorage.eTag = JSON.stringify(xhr.getResponseHeader('eTag'));
-      //     $.getJSON('assets/js/data/projects.json', function(data, message, xhr) {
-      //       localStorage.projectData = JSON.stringify(data);
-      //       Project.loadAll(JSON.parse(localStorage.projectData));
-      //       appView.renderProjectPage();
-      //     });
-      //   } else {
-      //     Project.loadAll(JSON.parse(localStorage.projectData));
-      //     appView.renderProjectPage();
-      //   }
-      // });
+      projectView.renderProjectPage();
     } else {
       $.getJSON('assets/js/data/projects.json', function (data, message, xhr) {
         localStorage.eTag = xhr.getResponseHeader('eTag');
         localStorage.projectData = JSON.stringify(data);
         Project.loadAll(JSON.parse(localStorage.projectData));
-        appView.renderProjectPage();
+        projectView.renderProjectPage();
       });
     }
   };
